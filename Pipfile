@@ -119,6 +119,7 @@ lyricsgenius = "*"
 spacy = "*"
 nltk = "*"
 jupyter = "*"
+dask = "*"
 
 [requires]
 python_version = "3.7"
