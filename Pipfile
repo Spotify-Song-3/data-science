@@ -120,6 +120,12 @@ spacy = "*"
 nltk = "*"
 jupyter = "*"
 dask = "*"
+beautifulsoup4 = "*"
+flask = "*"
+wordcloud = "*"
+seaborn = "*"
+gunicorn = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.7"
