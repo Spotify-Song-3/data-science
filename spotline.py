@@ -11,7 +11,7 @@ import numpy as np
 import os
 
 # import NLP processing models from models.py
-from models import processed_score, stemmed_score, lemma_score, get_lemmas
+from nlp_models import processed_score, stemmed_score, lemma_score, get_lemmas
 
 #from dotenv import load_dotenv
 
