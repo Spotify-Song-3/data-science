@@ -4,7 +4,7 @@ import requests
 import json
 import numpy as np
 
-from nlp_models import processed_score, stemmed_score, get_lemmas, lemma_score
+# from nlp_models import processed_score, stemmed_score, get_lemmas, lemma_score
 
 import nltk
 nltk.download('vader_lexicon')
@@ -12,10 +12,10 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # Model
 sid = SentimentIntensityAnalyzer()
-nlp = lemma_score()
+# nlp = lemma_score()
 
 # Pickle it
-pickle.dump(nlp, open('model.pkl', 'wb'))
+pickle.dump(sid, open('model.pkl', 'wb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 

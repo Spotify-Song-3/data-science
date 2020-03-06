@@ -6,7 +6,7 @@ sid = SentimentIntensityAnalyzer()
 
 import spacy
 from spacy.tokenizer import Tokenizer
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_md")
 tokenizer = Tokenizer(nlp.vocab)
 STOP_WORDS = nlp.Defaults.stop_words
 
@@ -14,7 +14,7 @@ import pandas as pd
 from nltk.stem import PorterStemmer
 ps = PorterStemmer()
 
-def processed_score(data=lyrics):
+def processed_score(data):
     tokens = []
     df = pd.DataFrame(data.split(), columns=['words'])
 
@@ -32,7 +32,7 @@ def processed_score(data=lyrics):
 
     return scores
 
-def stemmed_score(data=lyrics):
+def stemmed_score(data):
     """ Processes the text via spacy """
     tokens = []
     words = []
@@ -68,7 +68,7 @@ def get_lemmas(data):
     
     return lemmas
 
-def lemma_score(data=lyrics):
+def lemma_score(data):
     """ Processes the text via spacy """
     tokens = []
     words = []
