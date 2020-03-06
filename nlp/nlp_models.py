@@ -6,8 +6,7 @@ sid = SentimentIntensityAnalyzer()
 
 import spacy
 from spacy.tokenizer import Tokenizer
-import en_core_web_md
-nlp = en_core_web_md.load()
+nlp = spacy.load("en_core_web_lg")
 tokenizer = Tokenizer(nlp.vocab)
 STOP_WORDS = nlp.Defaults.stop_words
 
@@ -75,7 +74,7 @@ def lemma_score(data=lyrics):
     words = []
 
     # Lemmatization
-    words = get_lemmas(lyrics)
+    words = get_lemmas(data)
 
     df = pd.DataFrame(words, columns=['words'])
 
