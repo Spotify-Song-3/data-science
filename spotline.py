@@ -168,11 +168,11 @@ def output():
 
         # genius lyrics
         str('LYRICS'),
-        str(lyrics)
+        str(lyrics),
         
-        "nlp sentiment neg      : " + str(sentiment_neg)
-        "nlp sentiment neu      : " + str(sentiment_neu)
-        "nlp sentiment pos      : " + str(sentiment_pos)
+        "nlp sentiment neg      : " + str(sentiment_neg),
+        "nlp sentiment neu      : " + str(sentiment_neu),
+        "nlp sentiment pos      : " + str(sentiment_pos),
         "nlp sentiment comp     : " + str(sentiment_comp)
 
         )
@@ -331,9 +331,9 @@ def artist_tracks():
         headers={"Content-disposition":
                  "attachment; filename=artist_tracks.csv"})
 
-run(host='0.0.0.0', port=os.environ.get('PORT', '5000'))
+# run(host='0.0.0.0', port=os.environ.get('PORT', '5000'))
 
 if __name__ == '__main__':
     app.debug = True #Uncomment to enable debugging
     app.run() #Run the Server
-    .listen(process.env.PORT || 5000)
+    # .listen(process.env.PORT || 5000)
